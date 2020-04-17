@@ -1,8 +1,5 @@
 import React, {useEffect, useState} from "react";
-import "./services/api";
-
 import "./styles.css";
-import { useEffect } from "react";
 import api from "./services/api";
 
 function App() {
@@ -34,7 +31,7 @@ function App() {
       <ul data-testid="repository-list">
         {repositories.map(repository =>(
           <li key={repository.id}>
-            Repositório 1
+            {repository.title}
             <button onClick={()=>handleRemoveRepository(repository.id)}>
               Remover
             </button>
